@@ -8,7 +8,7 @@ const options = {
     }
   };
  // URL do endpoint para obter filmes 
-const apiPopularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
+const apiPopularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=pt-BR`;
 
  // Função para buscar e exibir filmes populares
  async function fetchPopularMovies() {
@@ -28,7 +28,7 @@ const apiPopularUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiK
        listItem.innerText = movie.title;
        const img = document.createElement('img');
        const poster = movie.poster_path;
-       img.src = `https://image.tmdb.org/t/p/w500${poster}`
+       img.src = `https://image.tmdb.org/t/p/w200${poster}`
        movieList.appendChild(listItem);
        movieList.appendChild(img);
 
@@ -43,7 +43,7 @@ function fetchSearchMovie(){
     let filme;
     const listSearch = document.getElementById('movies');
     filme = listSearch.value;
-    const apiSearchMovie = `https://api.themoviedb.org/3/search/movie?query=${filme}&include_adult=false`
+    const apiSearchMovie = `https://api.themoviedb.org/3/search/movie?query=${filme}&include_adult=false&language=pt-BR`
     
     fetch(apiSearchMovie, options)
         .then(response => response.json())
@@ -58,7 +58,7 @@ function fetchSearchMovie(){
                 list.textContent = movie.title;
                 const img = document.createElement('img');
                 const poster = movie.poster_path;
-                img.src = `https://image.tmdb.org/t/p/w500${poster}`
+                img.src = `https://image.tmdb.org/t/p/w200${poster}`
                 movieList.appendChild(list);
                 movieList.appendChild(img)
             });
