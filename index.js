@@ -68,5 +68,31 @@ function fetchSearchMovie(){
         .catch(err => console.error(err));
 }
 
+function fetchGenreMovie(){
+  let genreAcao = document.createElement('button');
+  genreAcao.innerText = "Ação"
+  let divBotao = document.getElementById('botao')
+  divBotao.appendChild(genreAcao);
+  
+  let genreTerror = document.createElement('button');
+  genreTerror.innerText = "Terror"
+  divBotao.appendChild(genreTerror);
+
+  genreAcao.addEventListener('click', function(){
+    fetch('https://api.themoviedb.org/3/discover/movie?language=pt-BR&with_genres=99', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+  })
+  
+  genreTerror.addEventListener('click', function(){
+    fetch('https://api.themoviedb.org/3/discover/movie?language=pt-BR&with_genres=27', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+  })
+}
+
  // Chamar a função para buscar e exibir filmes populares ao carregar a página
 window.onload = fetchPopularMovies();
+window.onload = fetchGenreMovie();
