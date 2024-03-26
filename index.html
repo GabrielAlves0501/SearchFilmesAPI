@@ -4,16 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Document</title>
 </head>
 <body>
     <header>
         <h1>Search Movie</h1>
     </header>
-    <h2>Filmes Populares</h2>
+
+    
+    <span class="material-symbols-outlined" onclick="apareceMenu()">
+        menu
+    </span>
+        <nav class="menu">
+            <ul>
+                <li><p>Categorias</p></li>
+                <li><a href="#">Populares</a></li>
+                <li><a href="#">Ação</a></li>
+                <li><a href="#">Animação</a></li>
+                <li><a href="#">Comédia</a></li>
+                <li><a href="#">Fantasia</a></li>
+                <li><a href="#">Ficção Científica</a></li>
+                <li><a href="#">Terror</a></li>
+                <li><a href="#">Romance</a></li>
+            </ul>
+        </nav>
+
+
+    <!--<h2>Filmes Populares</h2>
     <input type="text" name="movies" id="movies">
+    <div id="botao"></div>
     <input type="submit" value="enviar" onclick="fetchSearchMovie()">
-    <ul id="movieList"></ul>
+    <ul id="movieList"></ul>-->
+    
     <script src="index.js"></script>
+
 </body>
 </html>
