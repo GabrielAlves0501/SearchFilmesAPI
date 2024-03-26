@@ -81,7 +81,6 @@ function fetchGenreMovie(){
   let genreTerror = document.createElement('button');
   genreTerror.innerText = "Terror"
   divBotao.appendChild(genreTerror);
-<<<<<<< HEAD
   
   let genreAventura = document.createElement('button');
   genreAventura.innerText = "Aventura"
@@ -110,8 +109,6 @@ function fetchGenreMovie(){
   let popular = document.createElement('button');
   popular.innerText = "Popular"
   divBotao.appendChild(popular);
-=======
->>>>>>> 428e3d6ef986998473d539bb9b779c195571ce06
 
   genreAcao.addEventListener('click', function(){
     fetch('https://api.themoviedb.org/3/discover/movie?language=pt-BR&with_genres=99', options)
@@ -126,7 +123,6 @@ function fetchGenreMovie(){
     .then(response => console.log(response))
     .catch(err => console.error(err));
   })
-<<<<<<< HEAD
   
   genreAventura.addEventListener('click', function(){
     fetch('https://api.themoviedb.org/3/discover/movie?language=pt-BR&with_genres=12', options)
@@ -191,21 +187,26 @@ function fetchGenreMovie(){
 }
 
 function apareceMenu(){
-  menu = document.querySelector('.menu');
- 
-    menu.classList.remove('desaparece')
-    menu.classList.add('aparece')
+    let checkbox = document.getElementById('checkbox-menu');
+
+    checkbox.addEventListener('change', function(){
+      if (checkbox.checked){
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+        document.getElementById("teste").classList.toggle("change-label");
+      } else{
+        document.getElementById("nav").classList.toggle("change");
+        document.getElementById("menu-bg").classList.toggle("change-bg");
+        document.getElementById("teste").classList.toggle("change-label");
+      }
+    })
   
 }
+apareceMenu()
+
 
 
  // Chamar a função para buscar e exibir filmes populares ao carregar a página
 //window.onload = fetchPopularMovies();
 //window.onload = fetchGenreMovie();
-=======
-}
 
- // Chamar a função para buscar e exibir filmes populares ao carregar a página
-window.onload = fetchPopularMovies();
-window.onload = fetchGenreMovie();
->>>>>>> 428e3d6ef986998473d539bb9b779c195571ce06

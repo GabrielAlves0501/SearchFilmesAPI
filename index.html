@@ -12,11 +12,15 @@
         <h1>Search Movie</h1>
     </header>
 
-    
-    <span class="material-symbols-outlined" onclick="apareceMenu()">
-        menu
-    </span>
-        <nav class="menu">
+        <div class="container">
+            <input type="checkbox" id="checkbox-menu">
+            <label for="checkbox-menu" id="teste">
+                <span class="change-color-span"></span>
+                <span class="change-color-span"></span>
+                <span class="change-color-span"></span>
+            </label>
+        </div>
+        <nav class="nav" id="nav">
             <ul>
                 <li><p>Categorias</p></li>
                 <li><a href="#">Populares</a></li>
@@ -29,18 +33,15 @@
                 <li><a href="#">Romance</a></li>
             </ul>
         </nav>
+            
+        <div class="menu-bg" id="menu-bg"></div>
 
 
     <!--<h2>Filmes Populares</h2>
     <input type="text" name="movies" id="movies">
     <div id="botao"></div>
     <input type="submit" value="enviar" onclick="fetchSearchMovie()">
-<<<<<<< HEAD
     <ul id="movieList"></ul>-->
-=======
-    <ul id="movieList"></ul>
->>>>>>> 428e3d6ef986998473d539bb9b779c195571ce06
-    
     <script src="index.js"></script>
 
 </body>
