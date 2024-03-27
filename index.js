@@ -189,15 +189,15 @@ function fetchGenreMovie(){
 function apareceMenu(){
     let checkbox = document.getElementById('checkbox-menu');
 
-    checkbox.addEventListener('change', function(){
+    checkbox.addEventListener('click', function(){
       if (checkbox.checked){
         document.getElementById("nav").classList.toggle("change");
         document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("teste").classList.toggle("change-label");
+        document.getElementById("checkboxMenu").classList.toggle("change-label");
       } else{
         document.getElementById("nav").classList.toggle("change");
         document.getElementById("menu-bg").classList.toggle("change-bg");
-        document.getElementById("teste").classList.toggle("change-label");
+        document.getElementById("checkboxMenu").classList.toggle("change-label");
       }
     })
   
