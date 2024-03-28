@@ -19,22 +19,23 @@
                 <div class="container">
                     <input type="checkbox" id="checkbox-menu">
                     <label for="checkbox-menu" id="checkboxMenu">
-                        <span class="change-color-span"></span>
-                        <span class="change-color-span"></span>
-                        <span class="change-color-span"></span>
+                        <span class="change-color-span" id="t1"></span>
+                        <span class="change-color-span" id="t2"></span>
+                        <span class="change-color-span" id="t3"></span>
                     </label>
                 </div>
                 <nav class="nav" id="nav">
                     <ul>
                         <li><p>Categorias</p></li>
-                        <li><a href="#">Populares</a></li>
-                        <li><a href="#">Ação</a></li>
-                        <li><a href="#">Animação</a></li>
-                        <li><a href="#">Comédia</a></li>
-                        <li><a href="#">Fantasia</a></li>
-                        <li><a href="#">Ficção Científica</a></li>
-                        <li><a href="#">Terror</a></li>
-                        <li><a href="#">Romance</a></li>
+                        <li><a href="#" id="populares">Populares</a></li>
+                        <li><a href="#" id="acao">Ação</a></li>
+                        <li><a href="#" id="animacao">Animação</a></li>
+                        <li><a href="#" id="aventura">Aventura</a></li>
+                        <li><a href="#" id="comedia">Comédia</a></li>
+                        <li><a href="#" id="fantasia">Fantasia</a></li>
+                        <li><a href="#" id="ficcao">Ficção Científica</a></li>
+                        <li><a href="#" id="terror">Terror</a></li>
+                        <li><a href="#" id="romance">Romance</a></li>
                     </ul>
                 </nav>
                 <div class="menu-bg" id="menu-bg"></div>
@@ -44,20 +45,16 @@
             </div>
             <div class="box-busca">
                 <div class="search-box">
-                    <input type="text" name="busca" id="busca" class="search-box-input" placeholder="Busque seu filme">
-                    <button class="search-box-button"><i class="search-box-icone fa fa-search"></i></button>
+                    <input type="text" name="busca" id="busca" class="search-box-input" placeholder="Busque seu filme" autocomplete="off">
+                    <button class="search-box-button" onclick="fetchSearchMovie()"><i class="search-box-icone fa fa-search"></i></button>
                 </div>
             </div>
         </div>
     </header>
-
-       
-
-    <!--<h2>Filmes Populares</h2>
-    <input type="text" name="movies" id="movies">
-    <div id="botao"></div>
-    <input type="submit" value="enviar" onclick="fetchSearchMovie()">
-    <ul id="movieList"></ul>-->
+    
+    <h2>Filmes Populares</h2>
+    
+    <ul id="movieList"></ul>
     <script src="index.js"></script>
 
 </body>

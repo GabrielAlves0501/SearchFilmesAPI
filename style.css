@@ -42,6 +42,16 @@ label span {
     transition: 0.25s ease-in-out;
 }
 
+.testeFinal{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #ee4710;
+    transition: 0.25s ease-in-out;
+}
+
 label span:nth-child(1) {
     top: 0;
 }
@@ -136,8 +146,7 @@ label span:nth-child(3) {
     height: fit-content;
     margin: 10px;
 }
-.search-box-input::placeholder {
-    
+.search-box-input::placeholder { 
     color:#ffffff;
     opacity: 0.6;
 }
@@ -152,7 +161,6 @@ label span:nth-child(3) {
     height: 45px;
 }
 .search-box:hover .search-box-input {
-    
     padding-left: 2em;
     padding-right: 1em;
     width: 250px;
